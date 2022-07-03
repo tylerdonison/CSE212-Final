@@ -1,21 +1,21 @@
 # II: Queues
 
-##Introduction
+## Introduction
 
 Description
 
-##Disney Land: Queues in Action
+## Disney Land: Queues in Action
 
 Description
 
-##Queue Types
+## Queue Types
 
 Description
 
-##Example in Python: Deck of Cards
+## Example in Python: Deck of Cards
 
 Description
 
-##Problem to Solve: Black Jack/Disney Land
+## Problem to Solve: Black Jack/Disney Land
 
 Description
