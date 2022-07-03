@@ -1,8 +1,10 @@
 # Introduction
 
-Words on a page
+Description
 
 ## O-Notation
+
+Description
 
 ## Contact Information
 
