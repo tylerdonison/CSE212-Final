@@ -1,4 +1,4 @@
-# II: Queues
+# Queues
 
 ## Introduction
 
