@@ -1,4 +1,4 @@
-# III: Linked List
+# Linked Lists
 
 ## Introduction
 
