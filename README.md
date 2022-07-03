@@ -4,18 +4,18 @@ Description
 
 # Table of Contents:
 
-## [I: Introduction](https://github.com/tylerdonison/CSE212-Final/blob/main/I:%20Introduction.md)
+## [I: Introduction](https://github.com/tylerdonison/CSE212-Final/blob/main/0-welcome.md)
 * O-Notation
 * Contact Information
 
-## [II: Queues](https://github.com/tylerdonison/CSE212-Final/blob/main/II:%20Queues.md)
+## [II: Queues](https://github.com/tylerdonison/CSE212-Final/blob/main/1-queues.md)
 * Introduction
 * Disney Land: Queues in Action
 * Queue Types
 * Example in Python: Deck of Cards
 * Problem to Solve: Black Jack/Disney Land
 
-## [III: Linked List](https://github.com/tylerdonison/CSE212-Final/blob/main/III:%20Linked%20List.md)
+## [III: Linked List](https://github.com/tylerdonison/CSE212-Final/blob/main/2-linked_list.md)
 * Introduction
 * Snake: Link Lists in Action
 * Head & Tail -> Inserting & Removing
@@ -24,7 +24,7 @@ Description
 * Example in Python: Deck of Cards
 * Problem to Solve: Uno/Snake
 
-## [IV: Trees](https://github.com/tylerdonison/CSE212-Final/blob/main/IV:%20Trees.md)
+## [IV: Trees](https://github.com/tylerdonison/CSE212-Final/blob/main/3-trees.md)
 * Introduction
 * Recursion
 * Online Shopping: Trees in Action
