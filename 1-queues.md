@@ -19,13 +19,14 @@ ride_queue = []
 park_open = 0 #determines when the park is closing, not allowing more queues
 park_close = 10
 roller_coaster_run = True
+max_added = 1
 import sys
 
 def add_people_to_queue():
     names = ["Amber", "Bob", "Cathy", "Dude", "Ellen", "Fred", "Greg", "Hannah", "Isaiah", "Jake", "Karen", "Laurel", "Maggie",
     "Nate", "Oliver", "Pete", "Quinn", "Rex", "Steven", "Tyler", "Umbra", "Victor", "Wendy", "Xander", "Yoshi", "Zack"]
     
-    added_people = random.randint(0,1)
+    added_people = random.randint(0,max_added)
     people = []
     if added_people != 0:
         for i in range(0, added_people):
@@ -81,6 +82,12 @@ Queues in programming are particularly useful when muliple programs or threads a
 
 In a read/write scenario if multiple reads are happening at the same time, then the x variable can be overwritten and data can be scewed. However, if the threads are put in a queue as shown, the data is written and then the queues read it.
 
-## Problem to Solve: Black Jack/Disney Land
+## Problem to Solve: Roller Coaster with Multiple Passengers and Cars.
 
-Description
+Take the Disney Land code from above and change the max_added variable from line 9 and change it to a 5.
+
+How would you change the program if each roller coaster could take up to 4 riders?
+
+Change the max_added to 10.
+
+How would you change the program if the roller coaster had 2 cars instead of 1, allowing it to take 2 sets of riders?
