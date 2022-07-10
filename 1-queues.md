@@ -13,7 +13,7 @@ An example of this can also be seen in amusement parks, such as Disney Land. Eve
 ```python
 import random
 from time import sleep
-RIDE_TIME = 3 #how long a ride takes to complete
+RIDE_TIME = 2 #how long a ride takes to complete
 coaster_progress = RIDE_TIME #where the coaster is, if it equals ride time then it can go again.
 ride_queue = []
 park_open = 0 #determines when the park is closing, not allowing more queues
