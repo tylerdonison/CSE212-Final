@@ -63,7 +63,6 @@ def main():
         ride_roller_coaster()
         print("The following are in the queue:")
         print(ride_queue)
-        print(park_open)
         print()
         sleep(3)
 
