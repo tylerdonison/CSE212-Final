@@ -87,7 +87,3 @@ In a read/write scenario if multiple reads are happening at the same time, then 
 Take the Disney Land code from above and change the max_added variable from line 9 and change it to a 5.
 
 How would you change the program if each roller coaster could take up to 4 riders?
-
-Change the max_added to 10.
-
-How would you change the program if the roller coaster had 2 cars instead of 1, allowing it to take 2 sets of riders?
