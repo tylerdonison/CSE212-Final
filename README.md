@@ -5,6 +5,7 @@ Description
 # Table of Contents:
 
 ## [0: Introduction](https://github.com/tylerdonison/CSE212-Final/blob/main/0-welcome.md)
+* Data Structures
 * O-Notation
 * Contact Information
 
