@@ -8,7 +8,7 @@ In a restaurant, there is a need to rotate stock to make sure that the oldest fo
 
 ## Disney Land: Queues in Action
 
-An example of this can also be seen in amusement parks, such as Disney Land. Every ride in an amusement part typically has a line of people wanting to ride the ride. This line is a queue. It can be simulated in Python as follows:
+An example of this can also be seen in amusement parks, such as Disney Land. Every ride in an amusement part typically has a line of people wanting to ride the ride. This line is a queue. It can be simulated in Python in the following code. This code has a loop that will add 0-1 people to the queue, then, if the roller coaster is at the starting position, it will take the first person in the queue and run the ride. The ride will run while the queue is potentially being added to. The park will eventually close, not allowing more people to queue, and will empty out the queue from the front.
 
 ```python
 import random
@@ -69,14 +69,17 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+Example output:
 
-## Queue Types
+![Example Output](pictures/queue_pic_2.png)
 
-Description
+## Queues in programming
 
-## Example in Python: Deck of Cards
+Queues in programming are particularly useful when muliple programs or threads are trying to use the same information. Without a queue of some sort, reading and writing could be a mess. Say we have a variable, X, where we want multiple threads to add to this varible. The left side of the following is likely to occur without queues, whereas the right side is a way that queues solves the issue.
 
-Description
+![Programming Read/Write](pictures/queue_pic_3.png)
+
+In a read/write scenario if multiple reads are happening at the same time, then the x variable can be overwritten and data can be scewed. However, if the threads are put in a queue as shown, the data is written and then the queues read it.
 
 ## Problem to Solve: Black Jack/Disney Land
 
