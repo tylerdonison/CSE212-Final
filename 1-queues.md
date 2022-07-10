@@ -74,7 +74,7 @@ Example output:
 
 ![Example Output](pictures/queue_pic_2.png)
 
-## Queues in programming
+## Queues in Programming:
 
 Queues in programming are particularly useful when muliple programs or threads are trying to use the same information. Without a queue of some sort, reading and writing could be a mess. Say we have a variable, X, where we want multiple threads to add to this varible. The left side of the following is likely to occur without queues, whereas the right side is a way that queues solves the issue.
 
