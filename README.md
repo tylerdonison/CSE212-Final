@@ -12,8 +12,7 @@ Description
 ## [1: Queues](https://github.com/tylerdonison/CSE212-Final/blob/main/1-queues.md)
 * Introduction
 * Disney Land: Queues in Action
-* Queue Types
-* Example in Python: Deck of Cards
+* Queue in Programming
 * Problem to Solve: Black Jack/Disney Land
 
 ## [2: Linked Lists](https://github.com/tylerdonison/CSE212-Final/blob/main/2-linked_list.md)
