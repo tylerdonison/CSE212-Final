@@ -21,7 +21,7 @@ Say we have a linked list as follows, where each node has [Previous, Current, Ne
 
 How would we go about changing the head or tail, without changing the data structure type? How could we add a new head or tail, or remove the existing head or tail?
 
-##For removing the head we can do the following:
+### For removing the head we can do the following:
 
 Current list: 
 * [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
