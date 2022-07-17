@@ -16,8 +16,8 @@ Next: (where the next node is located, if the node is the tail, this is blank)
 
 Say we have a linked list as follows, where each node has [Previous, Current, Next]:
 
-    Head                                  Tail
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+Head                                  Tail
+None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]
 
 How would we go about changing the head or tail, without changing the data structure type? How could we add a new head or tail, or remove the existing head or tail?
 
