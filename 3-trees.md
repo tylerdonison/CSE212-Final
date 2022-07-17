@@ -68,8 +68,8 @@ The left tree is very efficient, only having 3 levels, but the right might as we
 
 ## The Read & Write of a Tree
 
-Trees are a great way to store objects by user ID, allowing searching to be O(log n) instead of going one by one in a potentially high volume system. Let's say a system has 1,000 IDS, it would make sense for the root of the tree to be the midpoint, 500.
+Trees are a great way to store objects by user ID, allowing searching to be O(log n) instead of going one by one in a potentially high volume system. Let's say a system has 1,000 IDs, it would make sense for the root of the tree to be the midpoint, 500.
 
 ## Problem to Solve: Creating a BST in Python
 
-Description
+[Follow these instructions](www.youtube.com)
