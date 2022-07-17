@@ -93,7 +93,7 @@ Let's remove the third node. Change it's next and previous to None, effectively 
 * [[None,0,1], [0,1,2?], [2?,3,4], [3,4,None]]    
 * [None,2,None]
 
-Change the surround nodes to have previouses and nexts that match the previous or next node's current:
+Change the surrounding nodes to have previouses and nexts that match the previous or next node's current:
 * [[None,0,1], [0,1,3], [1,3,4], [3,4,None]]      
 * [None,2,None]
 
