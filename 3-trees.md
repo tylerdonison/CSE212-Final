@@ -66,9 +66,13 @@ Unlike the previous, this tree is imbalanced, where it has a much longer right s
 
 The left tree is very efficient, only having 3 levels, but the right might as well be a normal list.
 
+We can see from the left tree that balancing a range of information starts with the center value (4 with 1-7), then each side starts with the center of their respective sides (2 for 1-3, and 6 for 5-7). This is how to best balance a tree is to take the middle, make it the top node, then seperate the remaining values, continuously finding the middle for the top node.
+
 ## The Read & Write of a Tree
 
-Trees are a great way to store objects by user ID, allowing searching to be O(log n) instead of going one by one in a potentially high volume system. Let's say a system has 1,000 IDs, it would make sense for the root of the tree to be the midpoint, 500.
+Trees are a great way to store objects by user ID, allowing searching to be O(log n) instead of going one by one in a potentially high volume system. Let's say a system has 1,000 IDs. Searching one-by-one would take 1000 iterations in a for loop in the worst-case scenario, whereas with a tree that uses O(log n), it would take, at most, 10 iterations.
+
+![Trees in Action](pictures/tree_pic_4.png)
 
 ## Problem to Solve: Creating a BST in Python
 
