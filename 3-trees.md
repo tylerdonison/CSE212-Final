@@ -40,6 +40,7 @@ Number found! 42.
 ## Balancing Act: The Balance of a Tree
 
 Recruision is used in a tree to find a free spot. Let's make a tree with the following numbers: 3, 2, 4, 1, 5:
+
 ![Trees in Action](pictures/tree_pic_1.png)
 
 ## The Read & Write of a Tree
