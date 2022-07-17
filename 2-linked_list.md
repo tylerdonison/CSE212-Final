@@ -100,3 +100,93 @@ Change the surrounding nodes to have previouses and nexts that match the previou
 ## Problem to Solve: Uno
 
 In the card game, Uno, players draw cards and typically sort them in their hands. The sorting rules can vary, but typically players will sort their hands by color first, then by value.
+
+```python
+from random import shuffle
+
+deck = []
+start_hand_size = 7
+
+def create_deck():
+    global deck
+    #action_cards = ["Skip", "Reverse", "Draw-2"] #there are two of each of these in each of the four colors, for 24 total
+    colors = ["red", "blue", "yellow", "green"] #25 of each color, 1-9 twice, 1 0 (19) and 6 action cards = 25
+    #wild_cards = [["black", "wild"], ["black", "draw-4"]] #8 wilds, or four of each)
+    number_range = 9
+    deck = []
+
+    for color in colors:
+        #for card in action_cards:
+            #new_card = [color, card]
+            #deck.append(new_card)
+            #deck.append(new_card) #add twice as there are two of each action card
+        for card in range(0, number_range+1):
+            new_card = [color, card]
+            deck.append(new_card)
+            if card != 0:
+                deck.append(new_card)
+    # for card in wild_cards:
+    #     deck.append(card)
+    #     deck.append(card)
+    #     deck.append(card)
+    #     deck.append(card)
+    
+    print(deck)
+    shuffle(deck)
+    print("Shuffled:")
+    print(deck)
+    print(len(deck))
+
+class drawn_card():
+    def __init__(self, card):
+        self.previous = []
+        self.current = [card]
+        self.next = []
+
+def draw_card():
+    global deck
+    if len(deck) != 0:
+        card = drawn_card(deck.pop(0))
+        return card
+    else:
+        print("deck is empty, reshuffling")
+        create_deck()
+        draw_card()
+
+class hand():
+    def __init__(self):
+        self.cards = []
+
+    def sort_hand(self):
+        #sort by color
+        red_cards = []
+        blue_cards = []
+        yellow_cards = []
+        green_cards = []
+        black_cards = []
+        for item in self.cards:
+            if item.current[0] == "red":
+                red_cards.append(item.current)
+            elif item.current[0] == "blue":
+                blue_cards.append(item.current)
+            elif item.current[0] == "yellow":
+                yellow_cards.append(item.current)
+            elif item.current[0] == "green":
+                green_cards.append(item.current)
+            elif item.current[0] == "black":
+                black_cards.append(item.current)
+        #sort by value
+
+def main():
+    create_deck()
+    player_hand = hand()
+    for i in range(1, start_hand_size+1):
+        drawn_card = draw_card()
+        player_hand.cards.append(drawn_card)
+    for item in player_hand.cards:
+        print(item.current)
+    (player_hand.sort_hand)
+
+if __name__ == "__main__":
+    main()
+```
