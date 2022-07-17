@@ -27,6 +27,8 @@ def search(guess, starting_range, ending_range):
         elif guess < middle:
             print(f"Number is less than {middle}.")
             search(guess, starting_range, middle)
+
+search(42, 0, 100)
 ```
 Output:
 Number is less than 50.
@@ -37,15 +39,36 @@ Number is greater than 40.
 Number is greater than 41.
 Number found! 42.
 
+While this may seem of only slight significance, let's try a number between 0, 10,000,000; 8,675,309:
+Output:
+Number is greater than 5000000.
+Number is greater than 7500000.
+Number is less than 8750000.
+...
+Number is less than 8675316.
+Number is less than 8675311.
+Number found! 8675309.
+(Only 22 guesses compared to 8,675,309 guesses)
+
 ## Balancing Act: The Balance of a Tree
 
 Recruision is used in a tree to find a free spot. Let's make a tree with the following numbers: 3, 2, 4, 1, 5:
 
 ![Trees in Action](pictures/tree_pic_1.png)
 
+However, some trees can be inbalanced. What if we did the same tree but the 2 and 3 were switched: 2, 3, 4, 1, 5:
+
+![Trees in Action](pictures/tree_pic_2.png)
+
+Unlike the previous, this tree is imbalanced, where it has a much longer right side. The more imbalanced a tree is, the least effecient it is. If we have a tree of 1-7 for example, we could either have:
+
+![Trees in Action](pictures/tree_pic_3.png)
+
+The left tree is very efficient, only having 3 levels, but the right might as well be a normal list.
+
 ## The Read & Write of a Tree
 
-Description
+Trees are a great way to store objects by user ID, allowing searching to be O(log n) instead of going one by one in a potentially high volume system. Let's say a system has 1,000 IDS, it would make sense for the root of the tree to be the midpoint, 500.
 
 ## Problem to Solve: Creating a BST in Python
 
