@@ -84,7 +84,9 @@ Change the surrounding nodes to match the new node instead of each other:
 Effectively add the new node by changing it's previous and next to match surrounding nodes:
 * [[None,0,1], [0,1,2], [1,2,2.5], [2, 2.5, 3] [2.5,3,4], [3,4,None]]
 
-### To remove, current list:
+### To remove a node from the middle:
+
+Current list:
 * [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 
 Let's remove the third node. Change it's next and previous to None, effectively removing it:
