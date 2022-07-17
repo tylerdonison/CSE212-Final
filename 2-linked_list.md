@@ -16,63 +16,66 @@ Next: (where the next node is located, if the node is the tail, this is blank)
 
 Say we have a linked list as follows, where each node has [Previous, Current, Next]:
 
-Head                                  Tail
-None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]
+
+* Head [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]] Tail
 
 How would we go about changing the head or tail, without changing the data structure type? How could we add a new head or tail, or remove the existing head or tail?
 
 ###For removing the head we can do the following:
 
 Current list: 
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Change Head's Next to new head, emptying it's previous:
-[[None,0,1], [None,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [[None,0,1], [None,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Disconnect and thus remove the head by emptying its next:
-[None,0,None]     [[None,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [None,0,None]     
+* [[None,1,2], [1,2,3], [2,3,4], [3,4,None]]
 
 ###For adding a new head we do the opposite:
 
 Current List and new node:
-[None,-1,None]    [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [None,-1,None]    
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Change head's previous to new node's current, making it not a head:
-[None,-1,None]    [[-1,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [None,-1,None]    
+* [[-1,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Add new Head with no previous, it's current location and it next as the old head's current:
-[[None,-1,0], [-1,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4, None]]
+* [[None,-1,0], [-1,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4, None]]
 
 ###For removing the tail, it is similar to removing the head:
 
 Current list:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Change tail's previous node to the new tail, emptying it's next:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,None], [3,4,None]]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,None], [3,4,None]]
 Disconnect and thus remove the tail by emptying its previous:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,None]]    [None,4,None]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,None]]    [None,4,None]
 
 ###For adding a new tail, it is similar to adding a new head:
 Current list and new node:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]   [None,5,None]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]   [None,5,None]
 Change tail's next to the new node's current, making the old tail not a tail anymore
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,5]]      [None,5,None]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,5]]      [None,5,None]
 Add the new tail with no next, it's current location and it's previous as the old tail's previous
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,5], [4,5,None]]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,5], [4,5,None]]
 
 ###For the middle, it's basically combining the tail and head logic
 
 Current list and new node:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]   [None,2.5,None]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]   [None,2.5,None]
 Find where the node is to be placed
-[[None,0,1], [0,1,2], [1,2,3], [new node to go here] [2,3,4], [3,4,None]]   [None,2.5,None]
+* [[None,0,1], [0,1,2], [1,2,3], [new node to go here] [2,3,4], [3,4,None]]   [None,2.5,None]
 Change the surrounding nodes to match the new node instead of each other:
-[[None,0,1], [0,1,2], [1,2,2.5], [new node to go here] [2.5,3,4], [3,4,None]]   [None,2.5,None]
+* [[None,0,1], [0,1,2], [1,2,2.5], [new node to go here] [2.5,3,4], [3,4,None]]   [None,2.5,None]
 Effectively add the new node by changing it's previous and next to match surrounding nodes:
-[[None,0,1], [0,1,2], [1,2,2.5], [2, 2.5, 3] [2.5,3,4], [3,4,None]]
+* [[None,0,1], [0,1,2], [1,2,2.5], [2, 2.5, 3] [2.5,3,4], [3,4,None]]
 
 To remove, current list:
-[[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
+* [[None,0,1], [0,1,2], [1,2,3], [2,3,4], [3,4,None]]
 Let's remove the third node. Change it's next and previous to None, effectively removing it:
-[[None,0,1], [0,1,2?], [2?,3,4], [3,4,None]]    [None,2,None]
+* [[None,0,1], [0,1,2?], [2?,3,4], [3,4,None]]    [None,2,None]
 Change the surround nodes to have previouses and nexts that match the previous or next node's current:
-[[None,0,1], [0,1,3], [1,3,4], [3,4,None]]      [None,2,None]
+* [[None,0,1], [0,1,3], [1,3,4], [3,4,None]]      [None,2,None]
 
 ## Problem to Solve: Uno
 
